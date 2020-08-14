@@ -24,13 +24,13 @@ const db = knex ({
 });
 
 //console.log(db.select('*').from('users'));
-db.select('*').from('users').then(data => {
-	console.log(data);
-});
+//db.select('*').from('users').then(data => {
+//	console.log(data);
+//});
 
 app.get('/', (req,res) => {
-	//res.send('This is working!');
-	res.send(database.users);
+	res.send('This is working!');
+	//res.send(database.users);
 })
 
 app.post('/signin', signin.handleSignin(db, bcrypt));
